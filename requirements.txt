@@ -1,0 +1,14 @@
+torch>=2.0.0
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+scikit-learn
+wfdb
+fastapi
+uvicorn
+pydantic
+PyYAML
+tqdm
+-e .
