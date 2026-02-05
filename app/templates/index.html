@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ECG Anomaly Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🫀 ECG Anomaly Detection</h1>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".npy" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+        <div class="result">
+            <h2>Prediction: {{ result }}</h2>
+            <p>Confidence: {{ probability }}</p>
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
