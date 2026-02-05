@@ -38,15 +38,14 @@ Raw ECG
 → Web UI / REST API
 → Docker + AWS CI/CD Deployment
 
-📂 Project Structure
 Continuous-ECG-Time-Series-Anomaly-Detection/
 ├── app/
 │   ├── main.py                # FastAPI entry point
-│   ├── inference.py           # Model loading & prediction
+│   ├── inference.py           # Model loading & inference
 │   ├── templates/
 │   │   └── index.html         # Frontend UI
 │   └── static/
-│       └── style.css          # UI styling
+│       └── style.css          # CSS styling
 │
 ├── src/
 │   └── model.py               # ECGCNN & ECGAutoencoder
@@ -66,13 +65,15 @@ Continuous-ECG-Time-Series-Anomaly-Detection/
 │   ├── 03_model_experiments.ipynb
 │   └── 04_results_analysis.ipynb
 │
-├── .github/workflows/
-│   └── cicd.yaml              # CI/CD pipeline
+├── .github/
+│   └── workflows/
+│       └── cicd.yaml          # CI/CD pipeline
 │
-├── Dockerfile
-├── .dockerignore
-├── requirements.txt
-└── README.md
+├── Dockerfile                 # Docker image definition
+├── .dockerignore              # Docker ignore rules
+├── requirements.txt           # Python dependencies
+└── README.md                  # Project documentation
+
 
 🔬 Data Pipeline
 Raw Data (data/raw)
